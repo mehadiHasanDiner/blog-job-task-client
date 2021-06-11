@@ -20,12 +20,12 @@ body {
 }
 
 .ant-layout {
-  background: linear-gradient(180deg, rgba(0,212,255,0.28335084033613445) 0%, rgba(156,255,254,0) 100%) !important;
+  background: linear-gradient(180deg, rgba(46, 243, 250, 0.172) 0%, rgba(156,255,254,0) 100%) !important;
 
 }
 
 .mainLayout .ant-layout-header {
-  background: rgba(0, 255, 255, 0.219);
+  background: rgb(216, 255, 255);
   padding: 0;
   height: auto;
   line-height: 1.6;
@@ -71,6 +71,8 @@ title holder
 header
 ------ 
 */
+
+
 .ant-layout-header {
   position: fixed;
   left: 0;
@@ -169,9 +171,28 @@ header
 .header .ant-menu li.ant-menu-item {
   position: relative;
   color: #333;
+  padding-bottom: 5px;
 }
 
-.header .ant-menu li.ant-menu-item:before,
+.contact-style{
+  border:2px solid #00dbd0;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.ant-menu-item-selected {
+  color: #00dbd0 !important;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+  border-bottom: 2px solid #00dbd0 !important;
+  transform: translateY(200%);
+    transition: all .5s ease-in-out;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover{
+  color: #00dbd0 !important;
+}
+/* .header .ant-menu li.ant-menu-item:before,
 .header .ant-menu li.ant-menu-item:after {
   content: '';
   background: #1890ff;
@@ -182,8 +203,8 @@ header
   left: 30%;
   opacity: 0;
   transition: all 0.3s linear;
-}
-
+} */
+/* 
 .header .ant-menu li.ant-menu-item:after {
   left: auto;
   right: 30%;
@@ -210,16 +231,14 @@ header
 .header .ant-menu li.ant-menu-item:hover:after {
   right: 5%;
   opacity: 1;
-}
+} */
 
 /* 
 hero
 ---- 
 */
 .heroBlock {
-  /* background: url('assets/images/bg-hero.jpg') no-repeat; */
-  background-position: 50% 100%;
-  background-size: cover;
+  padding-top: 80px;
   height: 100vh;
 }
 
