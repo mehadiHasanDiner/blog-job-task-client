@@ -237,6 +237,25 @@ header
 hero
 ---- 
 */
+.hero-header{
+  height: 600px;
+}
+
+.hero-col-left{
+  padding-right: 50px;
+  padding-top: 30px;
+}
+
+.hero-col-right{
+  position: relative;
+  left: 50px;
+
+}
+
+.image-div-1{
+  position: absolute;
+
+}
 .heroBlock {
   padding-top: 80px;
   height: 100vh;

@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <Layout className="mainLayout">
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-                <div style={{ padding: '0 100px' }}>
+                <div className="container">
                     <div className="header">
                         <div className="logo logo-name">
                         <div><img src={logo} class="img-fluid" alt=""/> </div>
