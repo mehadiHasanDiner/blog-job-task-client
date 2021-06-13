@@ -13,10 +13,13 @@ const Hero = () => {
             <div className="heroBlock ant-layout">
                 <Row className="container hero-header" align="middle">
                     <Col span={12} className="hero-col-left">
-                        <h2>Healthy life with</h2>
-                        <h1>Nature Organic</h1>
-                        <p>Vegetables are the edible parts of a plant that is used in cooking or can be eaten now.</p>
-                        <Button style={{ backgroundColor: "#00dbd0" }} type="primary">Explore Now</Button>
+                        <div className="hero-title">
+                            <h2>Healthy life with</h2>
+                            <h1>Nature Organic</h1>
+                            <p>Vegetables are the edible parts of a plant that is used in cooking or can be eaten now.</p>
+                            <Button style={{ backgroundColor: "#00dbd0" }} type="primary">Explore Now</Button>
+                        </div>
+
                     </Col>
                     <Col span={12} className="hero-col-right">
                         <div className="image-div-1">
