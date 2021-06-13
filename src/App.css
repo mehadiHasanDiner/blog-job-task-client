@@ -55,9 +55,17 @@ title holder
   margin: 0;
 }
 
-.titleHolder p {
-  
+/* .titleHolder:after {
+  transform: translateX(-50%);
+  content: "";
+  background: #1890ff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 3px;
+  width: 50px;
 }
+ */
 
 /* 
 header
@@ -97,7 +105,7 @@ header
 }
 
 .header .logo .fas {
-  color: #1890ff;
+  color: #00dbd0;
   margin: 0 5px 0 0;
   font-size: 28px;
 }
@@ -123,7 +131,7 @@ header
   line-height: 1.4;
   position: relative;
 }
-
+/* 
 .header .ant-anchor-link:before,
 .header .ant-anchor-link:after {
   content: '';
@@ -155,7 +163,7 @@ header
 }
 
 /* ant menu */
-.header .ant-menu {
+/* .header .ant-menu {
   border: 0;
   background: none !important;
 }
@@ -164,7 +172,7 @@ header
   position: relative;
   color: #333;
   padding-bottom: 5px;
-}
+}  */
 
 .contact-style{
   border:2px solid #00dbd0;
@@ -382,11 +390,11 @@ Product
 }
 
 /* 
-blog
+about
 ------------
 */
 
-.blog-container{
+.about-container{
   margin-top: 100px;
   text-align: center;
   height: 100vh;
@@ -405,7 +413,7 @@ blog
 }
 
 .rate-comment{
-  margin-top: 20px;
+  margin-top: 10px;
   display: block;
 }
 
@@ -413,7 +421,7 @@ blog
   border-radius: 200%;
   width: 9rem;
   height: 9rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .worksBlock {
   /* background: url('assets/images/bg-works.jpg') no-repeat; */
@@ -422,6 +430,28 @@ blog
   background-attachment: fixed;
   color: #fff;
   position: relative;
+}
+
+.ant-carousel .slick-dots li button {
+  background: #00dbd0 !important;
+}
+
+
+.read-about{
+  padding: 0 100px ;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.read-about button {
+  border-radius: 20px;
+  font-size: 18px;
+  padding-bottom: 30px;
+  padding-top: 5px;
+}
+
+.subscribe-news{
+  margin-top: 80px;
 }
 
 .worksBlock:before {
@@ -454,10 +484,24 @@ blog
   height: 110px;
 }
 
+
+
 /* 
-faqs
+blog
 ----
 */
+
+.blog-container{
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.blog-card{
+  display: flex;
+  flex-direction: column;
+  
+}
 .faqBlock .ant-collapse {
   margin: 0 0 40px;
 }
@@ -473,54 +517,22 @@ faqs
 }
 
 /* 
-pricing block
--------------
-*/
-.pricingBlock .ant-list {
-  text-align: center;
-}
-
-.pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
-  box-shadow: 0 0 12px 2px #f3f3f3;
-  transform: scale(1.1);
-  position: relative;
-  z-index: 1;
-}
-
-.pricingBlock .ant-card-head-title {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.pricingBlock .large {
-  font-size: 38px;
-  line-height: 1;
-  margin: 0 0 20px;
-}
-
-.pricingBlock .fab {
-  margin: 0 10px 0 0;
-}
-
-/* 
-contact
--------
-*/
-.contactBlock .ant-form {
-  max-width: 640px;
-  margin: auto;
-}
-
-.contactBlock .ant-form textarea {
-  min-height: 120px;
-  height: 120px;
-}
-
-/* 
 footer
 ------
 */
+
+.footer-container{
+  height: 350px;
+  margin-top: 50px;
+  background-image: url(./images/Group\ 229.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-card{
+  padding-top: 80px;
+  color: white;
+}
 .ant-layout-footer {
   background: #111 !important;
   color: #fff !important;

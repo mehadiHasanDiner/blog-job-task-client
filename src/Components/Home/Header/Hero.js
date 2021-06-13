@@ -8,7 +8,7 @@ import heroImg2 from '../../../images/Group 195.png';
 
 const Hero = () => {
     return (
-        <div>
+        <div id="hero">
             <Navbar />
             <div className="heroBlock ant-layout">
                 <Row className="container hero-header" align="middle">

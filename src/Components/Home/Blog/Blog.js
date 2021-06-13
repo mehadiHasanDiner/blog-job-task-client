@@ -1,44 +1,59 @@
 import React from 'react';
-import { Row, Col } from 'antd';
-import { createFromIconfontCN } from '@ant-design/icons';
-import 'antd/dist/antd.css';
-import bgImg from '../../../images/Group 134.png'
-import comment from '../../../images/Group 86.png'
-import rateImage1 from '../../../images/blog-image-1.png';
+import image1 from '../../../images/Group 114.png';
+import card1 from '../../../images/blog-card-1.png'
+import card2 from '../../../images/blog-card-2.png'
+import card3 from '../../../images/blog-card-3.png'
+import { Card } from 'antd';
+
 
 const Blog = () => {
     return (
-        <div>
-            <div className="container blog-slide">
-                <div className="blog-container">
-                    <Row>
-                        <Col span={6} xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
-                            <div className="img-style">
-                                <img src={bgImg} alt="" />
-                            </div>
-                        </Col>
+        <div id="blog" className="container-fluid">
+            <div className="blog-container">
+                <img style={{ marginBottom: '20px' }} src={image1} alt="" />
+                <h2>Read Our Blog</h2>
+                <p style={{ padding: '0 250px', marginTop: '30px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
 
-                        <Col span={12} xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
-                            <div className="newsletter">
-                                <img src={comment} alt="" />
-                                <div className="rate-comment">
-                                    <img src={rateImage1} alt="" />
-                                    <h3>Jane Doe</h3>
-                                    {/* <StarOutlined /> */}
-                                </div>
-                            </div>
-                            <div className="read-blog">
-                                <h4>read-blog</h4>
+            <div className="d-flex justify-content-between">
+                <Card
+                    hoverable
+                    style={{ width: 350 }}
+                    cover={<img alt="example" src={card1}/>}
+                >
+                    <div style={{textAlign:'center'}}>
+                    <h4 style ={{color:'#00dbd0'}}>Blog Post One</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    <h5>Read More</h5>
+                    <hr style={{color:'#00dbd0', width:'50%', border: '1px solid', margin:'auto'}}/>
+                    </div>
+                </Card>
 
-                            </div>
-                        </Col>
+                <Card
+                    hoverable
+                    style={{ width: 350 }}
+                    cover={<img alt="example" src={card2}/>}
+                >
+                    <div style={{textAlign:'center'}}>
+                    <h4 style ={{color:'#00dbd0'}}>Blog Post One</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    <h5>Read More</h5>
+                    <hr style={{color:'#00dbd0', width:'50%', border: '1px solid', margin:'auto'}}/>
+                    </div>
+                </Card>
 
-                        <Col span={6} xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
-                            3 col-order-responsive
-                        </Col>
-                    </Row>
-                </div>
-
+                <Card
+                    hoverable
+                    style={{ width: 350 }}
+                    cover={<img alt="example" src={card3}/>}
+                >
+                    <div style={{textAlign:'center'}}>
+                    <h4 style ={{color:'#00dbd0'}}>Blog Post One</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    <h5>Read More</h5>
+                    <hr style={{color:'#00dbd0', width:'50%', border: '1px solid', margin:'auto'}}/>
+                    </div>
+                </Card>
             </div>
         </div>
     );

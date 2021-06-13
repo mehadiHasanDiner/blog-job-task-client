@@ -2,6 +2,8 @@ import React from 'react';
 import image1 from '../../../images/Group 114.png';
 import image2 from '../../../images/Group 205.png';
 import image3 from '../../../images/Group 207.png';
+import "animate.css/animate.min.css";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import Carousel from "react-elastic-carousel";
 import Item from './style';
@@ -21,10 +23,10 @@ const Products = () => {
         { width: 550, itemsToShow: 3 },
         { width: 768, itemsToShow: 4 },
         { width: 1200, itemsToShow: 5 },
-      ];
+    ];
 
     return (
-        <div id="about" className="block aboutBlock">
+        <div id="product" className="block aboutBlock">
             <div className="container-fluid">
                 <div className="titleHolder">
                     <img src={image1} alt="" />
@@ -52,24 +54,28 @@ const Products = () => {
                     </Col>
                 </Row>
 
+
                 <div className="product-slide">
-                <div className="contentHolder">
-                <h2>Proudly present by</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                
-                <div className="product-div">
-                    <Carousel breakPoints={breakPoints}>
-                        <Item> <img src={image4} alt="" /> </Item>
-                        <Item><img src={image6} alt="" /> </Item>
-                        <Item><img src={image5} alt="" /> </Item>
-                        <Item><img src={image6} alt="" /> </Item>
-                        <Item> <img src={image4} alt="" /> </Item>
-                        <Item><img src={image6} alt="" /> </Item>
-                        <Item><img src={image5} alt="" /> </Item>
-                        <Item><img src={image6} alt="" /> </Item>               
-                    </Carousel>
-                </div>
+                <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
+                    <div className="contentHolder">
+                        <h2>Proudly present by</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </ScrollAnimation>
+
+
+                    <div className="product-div">
+                        <Carousel breakPoints={breakPoints}>
+                            <Item> <img src={image4} alt="" /> </Item>
+                            <Item><img src={image6} alt="" /> </Item>
+                            <Item><img src={image5} alt="" /> </Item>
+                            <Item><img src={image6} alt="" /> </Item>
+                            <Item> <img src={image4} alt="" /> </Item>
+                            <Item><img src={image6} alt="" /> </Item>
+                            <Item><img src={image5} alt="" /> </Item>
+                            <Item><img src={image6} alt="" /> </Item>
+                        </Carousel>
+                    </div>
                 </div>
 
             </div>
