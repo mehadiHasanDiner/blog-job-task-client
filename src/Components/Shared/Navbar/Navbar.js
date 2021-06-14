@@ -1,14 +1,25 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Layout, Anchor } from 'antd';
+import { Layout, Anchor, Drawer, Button } from 'antd';
 import 'antd/dist/antd.css';
+import { MenuOutlined } from '@ant-design/icons';
+
 import logo from '../../../images/Group 220.png';
+import { useState } from 'react';
 
 const { Link } = Anchor;
 
 const { Header } = Layout;
 
 const Navbar = () => {
+
+    const [visible, setVisible] = useState(false);
+    const showDrawer = () => {
+        setVisible(true);
+    };
+    const onClose = () => {
+        setVisible(false);
+    };
 
     return (
         <Layout className="mainLayout">
@@ -27,13 +38,35 @@ const Navbar = () => {
                             <Menu.Item key="contact"><span className="contact-style">Contact</span></Menu.Item>
                         </Menu> */}
 
-                        <Anchor mode="horizontal" defaultSelectedKeys={['hero']}>
-                            <Link href="#hero" title="Home" />
-                            <Link href="#product" title="Products" />                            
-                            <Link href="#about" title="About Us" />                            
-                            <Link href="#blog" title="Blog" />                            
-                            <Link href="#contact" title="Contact" />                            
-                        </Anchor>
+                        <div className="mobileHidden">
+                            <Anchor mode="horizontal" defaultSelectedKeys={['hero']}>
+                                <Link href="#hero" title="Home" />
+                                <Link href="#product" title="Products" />
+                                <Link href="#about" title="About Us" />
+                                <Link href="#blog" title="Blog" />
+                                <Link href="#contact" title="Contact" />
+                            </Anchor>
+                        </div>
+                        <div className="mobileVisible">
+                            <Button style={{backgroundColor:"#00dbd0", color:'white'}} onClick={showDrawer}>
+                            <MenuOutlined  />
+                            </Button>
+                            <Drawer
+                                placement="right"
+                                closable={false}
+                                onClose={onClose}
+                                visible={visible}
+                            >
+                            <Anchor mode="horizontal" defaultSelectedKeys={['hero']}>
+                                <Link href="#hero" title="Home" />
+                                <Link href="#product" title="Products" />
+                                <Link href="#about" title="About Us" />
+                                <Link href="#blog" title="Blog" />
+                                <Link href="#contact" title="Contact" />
+                            </Anchor>
+                            </Drawer>
+                        </div>
+
                     </div>
                 </div>
             </Header>
