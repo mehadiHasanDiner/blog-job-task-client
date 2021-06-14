@@ -4,19 +4,28 @@ import card1 from '../../../images/blog-card-1.png'
 import card2 from '../../../images/blog-card-2.png'
 import card3 from '../../../images/blog-card-3.png'
 import { Card } from 'antd';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 
 const Blog = () => {
+
+    useEffect(() =>{
+        AOS.init({duration: 2000});
+    }, [])
+
     return (
         <div id="blog" className="container-fluid">
-            <div className="blog-container">
+            <div data-aos="fade-up" className="blog-container">
                 <img style={{ marginBottom: '20px' }} src={image1} alt="" />
                 <h2>Read Our Blog</h2>
                 <p style={{ padding: '0 250px', marginTop: '30px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
 
             <div className="d-flex justify-content-between">
-                <Card
+                <Card data-aos="fade-left" 
                     hoverable
                     style={{ width: 350 }}
                     cover={<img alt="example" src={card1}/>}
@@ -29,7 +38,7 @@ const Blog = () => {
                     </div>
                 </Card>
 
-                <Card
+                <Card data-aos="fade-up" 
                     hoverable
                     style={{ width: 350 }}
                     cover={<img alt="example" src={card2}/>}
@@ -42,7 +51,7 @@ const Blog = () => {
                     </div>
                 </Card>
 
-                <Card
+                <Card data-aos="fade-right" 
                     hoverable
                     style={{ width: 350 }}
                     cover={<img alt="example" src={card3}/>}

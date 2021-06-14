@@ -1,14 +1,24 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+import { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import logo from '../../../images/Group 225.png'; 
 import fb from '../../../images/Group 99.png'; 
 import linkdin from '../../../images/Group 100.png'; 
 import instagram from '../../../images/Group 105.png'; 
 
 const Contact = () => {
+
+    useEffect(() =>{
+        AOS.init({duration: 2000});
+    }, [])
+
     return (
         <div id="contact" className="footer-container">
-            <div className="container">
+            <div  data-aos="fade-down"  className="container">
                 <div className="footer-card">
                     <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                         <Col className="gutter-row" span={8}>
