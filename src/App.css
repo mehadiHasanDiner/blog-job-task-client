@@ -500,8 +500,13 @@ blog
 .blog-card{
   display: flex;
   flex-direction: column;
-  
 }
+
+.blog-text{
+  padding: 0 250px;
+  margin-top: 30px;
+}
+
 .faqBlock .ant-collapse {
   margin: 0 0 40px;
 }
@@ -522,7 +527,7 @@ footer
 */
 
 .footer-container{
-  height: 350px;
+  width: 100%;
   margin-top: 50px;
   background-image: url(./images/Group\ 229.png);
   background-repeat: no-repeat;
@@ -600,6 +605,15 @@ responsive
 }
 
 @media only screen and (max-width: 767px) {
+  .aboutBlock .contentHolder {
+    margin: auto;
+  }
+  .image-div-1 img{
+    width: 85%;
+  }
+  .image-div-2 img{
+    width: 65%;
+  }
   .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
     transform: scale(1);
   }
@@ -611,4 +625,26 @@ responsive
   .mobileHidden {
     display: none;
   }
+  .content img{
+    width: 150%;
+  }
+ .read-about{
+   padding: 0px 0px;
+   margin: auto;
+   font-size: 2px;
+ }
+ .read-about button{
+   padding: 5px;
+   font-size: 14px;
+ }
+ .blog-text{
+   padding: 0;
+   margin: auto;
+ }
+.footer-container{
+  text-align: center;
+}
+.footer-container hr{
+  margin: auto;
+}
 }

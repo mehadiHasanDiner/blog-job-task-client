@@ -38,7 +38,7 @@ const Products = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <Row data-aos="fade-up" gutter={[16, 16]}>
-                    <Col md={{ span: 8 }}>
+                    <Col md={{ span: 12 }} xs={{ span: 24 }}>
                         <div className="content">
                             <div className="icon">
                                 <img src={image3} alt="" />

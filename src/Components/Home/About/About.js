@@ -17,9 +17,17 @@ const About = () => {
 
 
     const contentStyle = {
-        height: '130px',
+        height: '150px',
         color: 'black',
         textAlign: 'center',
+        breakpoints:{
+            786:{
+                height:'250px'
+            },
+            499: {
+                height:'300px'
+            }
+        }
       };
 
     return (
@@ -50,17 +58,17 @@ const About = () => {
                                     </div>
                                     <div  data-aos="fade-up" style={{ marginTop: '20px' }}>
                                         <Carousel autoplay>
-                                            <div>
-                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts and</p>
+                                            <div st>
+                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts</p>
                                             </div>
                                             <div>
-                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts and</p>
+                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts</p>
                                             </div>
                                             <div>
-                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts and</p>
+                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts</p>
                                             </div>
                                             <div>
-                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts and</p>
+                                                <p style={contentStyle}>Thank you for all the amazing produce and products you deliver each week you make my life so easy an bring goodness into our family eating. I’ve been roasting a lot of brussel sprouts</p>
                                             </div>
                                         </Carousel>
                                     </div>
@@ -76,8 +84,8 @@ const About = () => {
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
                                 <div className="read-about d-flex justify-content-between">
-                                <h5>Enter your email address</h5>
-                                <Button style={{ backgroundColor: "#00dbd0" }} type="primary">Explore Now</Button>
+                                <p style={{fontWeight:'bold'}}>Enter your email address</p>
+                                <Button style={{ backgroundColor: "#00dbd0" }} type="primary">Subscribe</Button>
                                 </div>
                             </div>
                         </Col>

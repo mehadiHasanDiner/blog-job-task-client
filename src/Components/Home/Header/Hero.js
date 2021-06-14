@@ -19,7 +19,7 @@ const Hero = () => {
             <Navbar />
             <div className="heroBlock ant-layout">
                 <Row className="container hero-header" align="middle">
-                    <Col data-aos="fade-left" span={12} className="hero-col-left">
+                    <Col data-aos="fade-left" lg={{ span: 12 }} md={{ span: 6 }} xs={{ span: 24 }}   className="hero-col-left">
                         <div className="hero-title">
                             <h2>Healthy life with</h2>
                             <h1>Nature Organic</h1>
@@ -28,7 +28,7 @@ const Hero = () => {
                         </div>
 
                     </Col>
-                    <Col data-aos="fade-right" span={12} className="hero-col-right">
+                    <Col data-aos="fade-right" lg={{ span: 12 }} md={{ span: 6 }}  xs={{ span: 24 }}  className="hero-col-right">
                         <div className="image-div-1">
                             <img src={heroImg1} alt="" />
                         </div>

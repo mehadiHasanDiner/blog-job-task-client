@@ -21,7 +21,7 @@ const Blog = () => {
             <div data-aos="fade-up" className="blog-container">
                 <img style={{ marginBottom: '20px' }} src={image1} alt="" />
                 <h2>Read Our Blog</h2>
-                <p style={{ padding: '0 250px', marginTop: '30px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
 
             <div className="d-flex justify-content-between">
