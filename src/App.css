@@ -612,7 +612,7 @@ responsive
     width: 85%;
   }
   .image-div-2 img{
-    width: 65%;
+    width: 70%;
   }
   .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
     transform: scale(1);
@@ -646,5 +646,9 @@ responsive
 }
 .footer-container hr{
   margin: auto;
+}
+.hero-col-left{
+  padding-left: 20px;
+  margin-top: 20px;
 }
 }
