@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Layout, Anchor, Drawer, Button } from 'antd';
 import 'antd/dist/antd.css';
 import { MenuOutlined } from '@ant-design/icons';
+import { Link as Link1 } from 'react-router-dom';
 
 import logo from '../../../images/Group 220.png';
 import { useState } from 'react';
@@ -41,10 +42,11 @@ const Navbar = () => {
                         <div className="mobileHidden">
                             <Anchor mode="horizontal" defaultSelectedKeys={['hero']}>
                                 <Link href="#hero" title="Home" />
-                                <Link href="#product" title="Products" />
-                                <Link href="#about" title="About Us" />
                                 <Link href="#blog" title="Blog" />
-                                <Link href="#contact" title="Contact" />
+                                <Link href="#aboutSection" title="About Us" />
+                                <Link href="#product" title="Products" />
+                                {/* <Link1 to="/addBlogs" > Admin </Link1> */}
+                                <Link1 to="/login" > Sign In </Link1>
                             </Anchor>
                         </div>
                         <div className="mobileVisible">
@@ -59,10 +61,11 @@ const Navbar = () => {
                             >
                             <Anchor mode="horizontal" defaultSelectedKeys={['hero']}>
                                 <Link href="#hero" title="Home" />
-                                <Link href="#product" title="Products" />
-                                <Link href="#about" title="About Us" />
                                 <Link href="#blog" title="Blog" />
-                                <Link href="#contact" title="Contact" />
+                                <Link href="#aboutSection" title="About Us" />
+                                <Link href="#product" title="Products" />
+                                {/* <Link href="/addBlogs" title="Admin" /> */}
+                                <Link1 to="/login" > Sign In </Link1>
                             </Anchor>
                             </Drawer>
                         </div>

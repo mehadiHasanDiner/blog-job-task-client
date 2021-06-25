@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../../Shared/Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 import { Row, Col, Button } from 'antd';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,7 +16,6 @@ const Hero = () => {
     }, [])
     return (
         <div id="hero">
-            <Navbar />
             <div className="heroBlock ant-layout">
                 <Row className="container hero-header" align="middle">
                     <Col data-aos="fade-left" lg={{ span: 12 }} md={{ span: 6 }} xs={{ span: 24 }}   className="hero-col-left">

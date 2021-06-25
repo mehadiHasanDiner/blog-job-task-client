@@ -32,8 +32,8 @@ const About = () => {
 
     return (
         <div>
-            <div id="about" className="container blog-slide">
-                <div className="about-container">
+            <div className="container blog-slide">
+                <div  id="aboutSection" className="about-container">
                     <Row>
                         <Col  span={6} xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
                             <div data-aos="fade-left" className="img-style">
@@ -78,7 +78,7 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div data-aos="flip-left"  className="blog-style">
+                            <div data-aos="flip-left"  className="about-style">
                                 <h4>Subscribe to our Newsletter</h4>
                                 <div style={{ marginTop: '20px' }}>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

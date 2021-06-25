@@ -131,7 +131,7 @@ header
   line-height: 1.4;
   position: relative;
 }
-/* 
+
 .header .ant-anchor-link:before,
 .header .ant-anchor-link:after {
   content: '';
@@ -172,7 +172,7 @@ header
   position: relative;
   color: #333;
   padding-bottom: 5px;
-}  */
+} 
 
 .contact-style{
   border:2px solid #00dbd0;
@@ -401,9 +401,7 @@ about
   width: 100%;
   position: relative;
   overflow: hidden;
-
 }
-
 
 .img-style{
   position: absolute;
@@ -492,9 +490,11 @@ blog
 */
 
 .blog-container{
-  margin-top: 50px;
+  margin-bottom: 20px;
   text-align: center;
-  width: 100%;
+  justify-content: center;
+  float: left;
+  margin-right: 30px;
 }
 
 .blog-card{
@@ -505,6 +505,17 @@ blog
 .blog-text{
   padding: 0 250px;
   margin-top: 30px;
+}
+
+.blog-detail-area img {
+  display: block;
+  margin: 0 auto 40px;
+  width: 500px;
+  height: 300px;
+}
+.blog-detail-area h2 {
+  font-size: 40px;
+  font-weight: 600;
 }
 
 .faqBlock .ant-collapse {
@@ -594,6 +605,78 @@ footer
   display: block;
 }
 
+/* Login */
+.login-method form, .logOut {
+  border-top: 1px solid #BEBEBE;
+  border-bottom: 1px solid #BEBEBE;
+  border-left: 1px solid #F6F6F6;
+  border-right: 1px solid #F6F6F6;
+  padding: 15px 30px;
+}
+.logOut {
+  margin-top: 80px;
+}
+.logOut button {
+  margin-top: 10px;
+}
+.login-method input {
+  border: none;
+  border-bottom: 1px solid #F6F6F6;
+}
+.login-method input:hover {
+  border-bottom: 1px solid #BEBEBE;
+}
+.login-method input[type="submit"], .logOut button, .search-btn {
+  color: #fff;
+  background: crimson;
+  border: 1px solid #BEBEBE;
+  transition: all .3s;
+}
+.login-method input[type="submit"]:hover, .logOut button:hover, .search-btn:hover {
+  color: crimson;
+  background: none;
+}
+.login-method p {
+  text-align: center;
+  padding-top: 15px;
+}
+.login-method span {
+  color: crimson;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.brand-login button {
+  position: relative;
+  margin-top: 80px;
+  border: 1px solid #BEBEBE;
+  border-radius: 25px;
+  padding: 5px;
+  font-size: 18px;
+}
+.brand-login span {
+  color: #4285F4;
+}
+.brand-login button::before {
+  content: 'Or';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  z-index: 1;
+  background-color: #fff;
+  padding: 0 5px;
+}
+.brand-login button::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #BEBEBE;
+  width: 100%;
+  top: -37px;
+  left: 0;
+  z-index: 0;
+}
+
+
+
 /* 
 responsive
 ----------
@@ -650,5 +733,8 @@ responsive
 .hero-col-left{
   padding-left: 20px;
   margin-top: 20px;
+}
+.blog-container{
+  margin-top: 100px;
 }
 }

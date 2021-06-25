@@ -17,7 +17,7 @@ const Contact = () => {
     }, [])
 
     return (
-        <div id="contact" className="footer-container">
+        <div className="footer-container">
             <div  data-aos="fade-down"  className="container">
                 <div className="footer-card">
                     <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
