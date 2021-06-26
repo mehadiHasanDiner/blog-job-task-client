@@ -488,6 +488,12 @@ about
 blog
 ----
 */
+.blog-title{
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 30px;
+}
 
 .blog-container{
   margin-bottom: 20px;
@@ -756,7 +762,7 @@ responsive
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 775px) {
   .aboutBlock .contentHolder {
     margin: auto;
   }
@@ -804,6 +810,12 @@ responsive
   margin-top: 20px;
 }
 .blog-container{
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  float: none;
+}
+.blog-title{
   margin-top: 100px;
 }
 }

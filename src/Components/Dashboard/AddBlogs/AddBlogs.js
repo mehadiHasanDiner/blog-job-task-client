@@ -22,7 +22,7 @@ const AddBlogs = () => {
             imageURL: blogImage
         };
         console.log(data);
-        const url = `http://localhost:5000/addBlogs`;
+        const url = `https://nameless-castle-52079.herokuapp.com/addBlogs`;
 
         fetch(url, {
             method: 'POST',

@@ -128,10 +128,10 @@ console.log(loggedInUser)
                                 </div> 
                             }
                             <div>
-                                <input type="email" name="email" onBlur={handleBlur} placeholder='Email' className="form-control mb-3" value="test@test.com" required/>
+                                <input type="email" name="email" onBlur={handleBlur} placeholder='Email' className="form-control mb-3" required/>
                             </div>
                             <div>
-                                <input type="password" name="password" onBlur={handleBlur} placeholder="Password" className="form-control mb-3" value="#2021dev" required/>
+                                <input type="password" name="password" onBlur={handleBlur} placeholder="Password" className="form-control mb-3" required/>
                             </div>
                            
                             {/* {validation.error && <p className="text-danger">{validation.error}</p>} */}

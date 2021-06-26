@@ -14,7 +14,7 @@ const Home = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://nameless-castle-52079.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
@@ -30,7 +30,7 @@ const Home = () => {
             <Hero />
 
             <div id="blog">
-            <div data-aos="fade-up" className="blog-container">
+            <div data-aos="fade-up" className="blog-title">
                 <img style={{ marginBottom: '20px' }} src={image1} alt="" />
                 <h2>Read Our Blog</h2>
                 <p className="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

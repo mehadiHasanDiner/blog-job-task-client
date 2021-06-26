@@ -7,14 +7,14 @@ const BlogList = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://nameless-castle-52079.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
 
     const handleDelete = (id) => {
         history.push('/');
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://nameless-castle-52079.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
