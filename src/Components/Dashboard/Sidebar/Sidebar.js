@@ -1,34 +1,38 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faListAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { faListAlt, faPlus, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
+import { Link, useHistory } from 'react-router-dom';
+import firebase from "firebase/app";
+import "firebase/auth"
 import logo from '../../../images/Group 220.png';
 
 
 
 const Sidebar = ({handleSidebar}) => {
-    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    // const history = useHistory();
-    // const handleLogOut = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const history = useHistory();
+    const handleLogOut = () => {
 
-    //     firebase.auth().signOut()
-    //     .then((res) => {  
-    //         const signOutUser = {
-    //             userName: '',
-    //             email: '',
-    //             error: '',
-    //             photo: '',
-    //             password: '',
-    //             confirmPassword: '',
-    //             isLoggedIn: false
-    //         } 
-    //         setLoggedInUser(signOutUser);
-    //         history.push('/');
-    //     })
-    //     .catch((error) => {
-    //         // An error happened.
-    //     });
-    // }
+        firebase.auth().signOut()
+        .then((res) => {  
+            const signOutUser = {
+                userName: '',
+                email: '',
+                error: '',
+                photo: '',
+                password: '',
+                confirmPassword: '',
+                isLoggedIn: false
+            } 
+            setLoggedInUser(signOutUser);
+            history.push('/');
+        })
+        .catch((error) => {
+            // An error happened.
+        });
+    }
 
     return (
         <div className="sidebar">
@@ -50,9 +54,9 @@ const Sidebar = ({handleSidebar}) => {
                     </ul>
                 </div>
 
-                {/* <div className="logout" onClick={handleLogOut}>
+                <div className="logout" onClick={handleLogOut}>
                     <FontAwesomeIcon icon={faSignOutAlt} /> <span>LogOut</span>
-                </div> */}
+                </div>
             </div>
         </div>
     );
