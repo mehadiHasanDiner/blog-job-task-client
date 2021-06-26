@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
+import NavbarLogin from '../../Login/NavbarLogin/NavbarLogin';
 
 const BlogDetails = () => {
     const {id} = useParams();
@@ -16,6 +16,7 @@ const BlogDetails = () => {
 
     return (
         <div>
+            <NavbarLogin/>
             <div className="container">
                 <div className="pt-5 mt-5 blog-detail-area">
                     <img className="img-fluid" src={imageURL} alt="" />

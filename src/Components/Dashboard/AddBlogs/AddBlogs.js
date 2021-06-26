@@ -60,17 +60,10 @@ const AddBlogs = () => {
             <Container className="mt-3">
 
                 <Row>
-                    <Col sm={3} className='side-bar'>
-                        <h3>Laptop Bazar</h3>
-                        <Link style={{ color: 'white' }} to="/addProduct">  <li> <span style={{ color: 'white', padding: "5px" }}><FontAwesomeIcon icon={faPlus} /></span> Add Product </li> </Link>
-                        <Link style={{ color: 'white' }} to="/manageProduct">  <li> <span style={{ color: 'white', padding: "5px" }}><FontAwesomeIcon icon={faGripHorizontal} /></span> Manage Product </li>  </Link>
-                        <li> <span style={{ color: 'white', padding: "5px" }}><FontAwesomeIcon icon={faPencilAlt} /></span> Edit Product</li>
-                    </Col>
 
 
-                    <Col sm={9}>
-                        <Form onSubmit={handleSubmit(onSubmit)}   className="p-3" style={{ backgroundColor: '#e1e1e1' }}>
-                            <h3>Add Blog</h3>
+                    <Col sm={12}>
+                        <Form onSubmit={handleSubmit(onSubmit)}   className="p-3 info" style={{ backgroundColor: '#e1e1e1' }}>
                             <Form.Row>
                                 <Form.Group as={Col}>
                                     <Form.Label><strong>Blog Title </strong></Form.Label>
@@ -79,14 +72,14 @@ const AddBlogs = () => {
 
                                 <Form.Group as={Col}>
                                     <Form.Label><strong> Blog Content</strong></Form.Label>
-                                    <textarea {...register("description")} id="description" className="mt-2 form-control"  cols="30" rows="9" required placeholder="Enter Content"></textarea>
+                                    <textarea {...register("description")} id="description" className="mt-2 form-control"  cols="30" rows="12" required placeholder="Enter Content"></textarea>
                                 </Form.Group>
                                 <Form.Group as={Col}>                                   
                                 <input type="file" id="image" className="mt-2 form-control" onChange={handleImageUpload} required />
                                 </Form.Group>
                             </Form.Row>
-
-                            <Button  variant="primary" type="submit"> Published Blog </Button>
+                            <br/>
+                            <Button style={{backgroundColor:'#00dbd0', border:'1px solid gray'}}  variant="primary" type="submit"> Published Blog </Button>
                         
                          {success &&
                         <p style={{fontWeight: '500'}} className="pt-4 text-center text-success">{success}</p>

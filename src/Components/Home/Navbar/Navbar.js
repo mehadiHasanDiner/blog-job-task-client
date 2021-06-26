@@ -7,12 +7,17 @@ import { Link as Link1 } from 'react-router-dom';
 
 import logo from '../../../images/Group 220.png';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
 
 const { Link } = Anchor;
 
 const { Header } = Layout;
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext (UserContext);
+    const {photo, email} = loggedInUser;
+
 
     const [visible, setVisible] = useState(false);
     const showDrawer = () => {
@@ -45,8 +50,14 @@ const Navbar = () => {
                                 <Link href="#blog" title="Blog" />
                                 <Link href="#aboutSection" title="About Us" />
                                 <Link href="#product" title="Products" />
-                                {/* <Link1 to="/addBlogs" > Admin </Link1> */}
-                                <Link1 to="/login" > Sign In </Link1>
+                                {/* <Link1 to="/admin" className="nav-link">Admin</Link1> */}
+
+                                {
+                                    !loggedInUser.isLoggedIn ? 
+                                    <Link1 to="/login" className="nav-link">Login</Link1>
+                                    :
+                                    <Link1 to="/user" class="nav-link">{photo ? <img style={{width: '30px', height: '30px', borderRadius: '100px'}} src={photo}  alt=""/> : <p style={{textTransform: 'capitalize', color:'#00dbd0', fontWeight:'bold'}} id="custom-link">{email.slice(0, -9)}</p>}</Link1>
+                                }
                             </Anchor>
                         </div>
                         <div className="mobileVisible">
@@ -64,8 +75,14 @@ const Navbar = () => {
                                 <Link href="#blog" title="Blog" />
                                 <Link href="#aboutSection" title="About Us" />
                                 <Link href="#product" title="Products" />
-                                {/* <Link href="/addBlogs" title="Admin" /> */}
-                                <Link1 to="/login" > Sign In </Link1>
+                                {/* <Link1 to="/admin" className="nav-link">Admin</Link1> */}
+
+                                {
+                                    !loggedInUser.isLoggedIn ? 
+                                    <Link1 to="/login" className="nav-link">Login</Link1>
+                                    :
+                                    <Link1 to="/user" class="nav-link">{photo ? <img style={{width: '30px', height: '30px', borderRadius: '100px'}} src={photo}  alt=""/> : <p style={{textTransform: 'capitalize', color:'#00dbd0', fontWeight:'bold'}}  id="custom-link">{email.slice(0, -9)}</p>}</Link1>
+                                }
                             </Anchor>
                             </Drawer>
                         </div>

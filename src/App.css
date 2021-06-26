@@ -128,7 +128,7 @@ header
 
 .header .ant-anchor-link {
   padding: 0 20px;
-  line-height: 1.4;
+  line-height: 2.7   ;
   position: relative;
 }
 
@@ -607,11 +607,10 @@ footer
 
 /* Login */
 .login-method form, .logOut {
-  border-top: 1px solid #BEBEBE;
-  border-bottom: 1px solid #BEBEBE;
-  border-left: 1px solid #F6F6F6;
-  border-right: 1px solid #F6F6F6;
+  border: 1px solid #00dbd0;
   padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 10px;
 }
 .logOut {
   margin-top: 80px;
@@ -621,19 +620,19 @@ footer
 }
 .login-method input {
   border: none;
-  border-bottom: 1px solid #F6F6F6;
+  border-bottom: 1px solid #00dbd0;
 }
 .login-method input:hover {
-  border-bottom: 1px solid #BEBEBE;
+  border: 2px solid #00dbd0;
 }
 .login-method input[type="submit"], .logOut button, .search-btn {
   color: #fff;
-  background: crimson;
-  border: 1px solid #BEBEBE;
+  background: #00dbd0;
+  border: 1px solid #00dbd0;
   transition: all .3s;
 }
 .login-method input[type="submit"]:hover, .logOut button:hover, .search-btn:hover {
-  color: crimson;
+  color: #00dbd0;
   background: none;
 }
 .login-method p {
@@ -641,14 +640,14 @@ footer
   padding-top: 15px;
 }
 .login-method span {
-  color: crimson;
+  color: #00c2b8;
   text-decoration: underline;
   cursor: pointer;
 }
 .brand-login button {
   position: relative;
   margin-top: 80px;
-  border: 1px solid #BEBEBE;
+  border: 1px solid #00dbd0;
   border-radius: 25px;
   padding: 5px;
   font-size: 18px;
@@ -668,14 +667,84 @@ footer
 .brand-login button::after {
   content: '';
   position: absolute;
-  border: 1px solid #BEBEBE;
+  border: 1px solid #00dbd0;
   width: 100%;
   top: -37px;
   left: 0;
   z-index: 0;
 }
 
+/* Sidebar */
+.sidebar {
+  background: #F4FCFB;
+  text-align: center;
+  height: 100vh;
+}
+.sidebar .logo {
+  padding: 20px 0;
+}
+.sidebar .logo a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+}
+.sidebar-detail {
+  height: 85%;
+}
+.sidebar-detail li, .logout {
+  background: #00dbd0;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
 
+
+/* NavbarLogin */
+.custom-navbar {
+  padding: 7px 0;
+  background: rgb(216, 255, 255);
+}
+.custom-navbar a {
+  font-weight: 500;
+}
+.custom-navbar .logo a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+/* BlogList */
+.list-blog {
+  background: none;
+  margin: -3px 0 0 -24px;
+  height: 90vh;
+  padding: 35px 0;
+}
+.list-blog .info {
+  height: 80vh;
+  background: #e1e1e1;
+  border-radius: 7px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px;
+  overflow-y: scroll;
+}
+.list-blog .info .tHead {
+  background: #F5F6FA;
+  border-radius: 7px;
+  padding: 10px 20px 6px;
+}
+.list-blog .info .tBody .title {
+  text-transform: capitalize;
+}
+.list-blog .info .tBody .delete {
+  color: #fff;
+  background: #FF4E54;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 /* 
 responsive

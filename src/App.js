@@ -12,6 +12,7 @@ import BlogDetails from './Components/Home/BlogDetails/BlogDetails';
 import Login from './Components/Login/Login';
 import Admin from './Components/Dashboard/Admin';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import UserControl from './Components/Dashboard/UserControl';
 
 
 export const UserContext = createContext();
@@ -46,20 +47,18 @@ function App() {
             <AddBlogs />
           </Route>
 
-          <Route path="/blog/:id">
+          <PrivateRoute path="/blog/:id">
             <BlogDetails />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/">
             <Home />
           </Route>
-          <PrivateRoute>
-            
-          </PrivateRoute>
-
           <Route path="/login">
             <Login />
           </Route>
-
+          <PrivateRoute path="/user">
+            <UserControl />
+          </PrivateRoute>
 
         </Switch>
       </Router>

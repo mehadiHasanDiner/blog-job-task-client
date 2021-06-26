@@ -6,6 +6,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
+import NavbarLogin from './NavbarLogin/NavbarLogin';
 
 
 if (!firebase.apps.length) {
@@ -113,6 +114,7 @@ console.log(loggedInUser)
 
     return (
         <div className="mt-5">
+            <NavbarLogin/>
 
         <div className="container">
             <div className="row">
@@ -126,20 +128,12 @@ console.log(loggedInUser)
                                 </div> 
                             }
                             <div>
-                                <input type="email" name="email" onBlur={handleBlur} placeholder='Email' className="form-control mb-3" required/>
+                                <input type="email" name="email" onBlur={handleBlur} placeholder='Email' className="form-control mb-3" value="test@test.com" required/>
                             </div>
                             <div>
-                                <input type="password" name="password" onBlur={handleBlur} placeholder="Password" className="form-control mb-3" required/>
+                                <input type="password" name="password" onBlur={handleBlur} placeholder="Password" className="form-control mb-3" value="#2021dev" required/>
                             </div>
-                            {!newUser &&
-                                    <div className="d-flex justify-content-between pb-3">
-                                        <div>
-                                            <input type="checkBox" className="mr-2"/>
-                                            Remember Me
-                                        </div>
-                                        <span>Forgot Password</span>
-                                    </div>
-                            } 
+                           
                             {/* {validation.error && <p className="text-danger">{validation.error}</p>} */}
                             <input type="submit" value={newUser ? 'Create an account' : 'Log in'} className="btn btn-secondary w-100 form-btn mt-4"/>
                             <p onClick={() => setNewUser(!newUser)}>{newUser ? "Already have an account?" : "Don't have an account?"} <span>{newUser ? 'Log in' : 'Create an account'}</span></p>
