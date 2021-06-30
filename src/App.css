@@ -710,6 +710,7 @@ footer
 
 /* NavbarLogin */
 .custom-navbar {
+  padding: 7px 0;
   background: rgb(216, 255, 255);
 }
 .custom-navbar a {

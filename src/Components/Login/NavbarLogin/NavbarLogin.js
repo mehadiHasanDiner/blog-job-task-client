@@ -18,7 +18,7 @@ const NavbarLogin = () => {
             </div>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-right " style={{float:'left'}}>
+                <Nav className="mr-right ">
                     <Link to="/home" className="nav-link">Home</Link>
                     <Link to="/admin" className="nav-link">Admin</Link>
                     {
