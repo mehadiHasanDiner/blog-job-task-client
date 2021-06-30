@@ -8,6 +8,7 @@ import { useState } from 'react';
 import image1 from '../../src/images/Group 114.png';
 import { useHistory } from 'react-router-dom';
 import Navbar from '../Components/Home/Navbar/Navbar';
+import Loading from '../images/tenor.gif';
 
 
 const Home = () => {
@@ -35,7 +36,11 @@ const Home = () => {
                 <h2>Read Our Blog</h2>
                 <p className="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-
+            
+            {
+                blogs.length === 0 && <div style={{ display: 'grid', alignItems: 'center', justifyContent: 'center' }}> <img style={{ width: '150px' }} src={Loading} alt="" />
+                </div>
+            }
             {
                 blogs.map(blog => <Blog
                     key={blog._id}

@@ -21,9 +21,7 @@ const BlogDetails = () => {
                 <div className="pt-5 mt-5 blog-detail-area">
                     <img className="img-fluid" src={imageURL} alt="" />
                     <h2>{title}</h2>
-                    <p>
-                        {description}
-                                           </p>
+                    <p> {description} </p>
                 </div>
             </div>
         </div>
