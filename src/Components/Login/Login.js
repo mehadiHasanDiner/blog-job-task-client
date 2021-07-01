@@ -120,11 +120,11 @@ const Login = () => {
                 <div className="row">
                     <div className="col-md-6 offset-md-3">
                         <div className="pt-5 login-method">
-                        <h4> For Testing Admin panel </h4>
-                    <ul>
-                        <li> Email: test@test.com</li>
-                        <li> Password: #2021dev</li>
-                    </ul>
+                            <h4> For Testing Admin panel </h4>
+                            <ul>
+                                <li> Email: test@test.com</li>
+                                <li> Password: #2021dev</li>
+                            </ul>
                             <form action="" onSubmit={handleSubmit}>
                                 <h3 className="py-3">{newUser ? 'Create an account' : 'Log in'}</h3>
                                 {newUser &&
