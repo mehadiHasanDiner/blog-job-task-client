@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import firebase from "firebase/app";
@@ -21,9 +21,9 @@ const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
     const location = useLocation();
-    const {from} = location.state || {from: {pathname: '/'}};
+    const { from } = location.state || { from: { pathname: '/' } };
 
-    
+
     // custom sign in and login method
     const handleBlur = (event) => {
         let isFindValid = true;
@@ -34,7 +34,7 @@ const Login = () => {
             isFindValid = /\d{1}/.test(event.target.value) && event.target.value.length > 7;
         }
         if (isFindValid) {
-            const userInfo = {...loggedInUser};
+            const userInfo = { ...loggedInUser };
             userInfo[event.target.name] = event.target.value;
             setLoggedInUser(userInfo);
         }
@@ -44,15 +44,15 @@ const Login = () => {
         if (newUser) {
             firebase.auth().createUserWithEmailAndPassword(loggedInUser.email, loggedInUser.password)
                 .then((userCredential) => {
-                    const {displayName, email, photoURL} = userCredential.user;
-                        const signInUser = {
-                            name: displayName,
-                            email: email,
-                            photo: photoURL,
-                            isLoggedIn: true
-                        }
-                        setLoggedInUser(signInUser);
-                        history.replace(from);
+                    const { displayName, email, photoURL } = userCredential.user;
+                    const signInUser = {
+                        name: displayName,
+                        email: email,
+                        photo: photoURL,
+                        isLoggedIn: true
+                    }
+                    setLoggedInUser(signInUser);
+                    history.replace(from);
                 })
                 .catch((error) => {
                     const signInUser = {
@@ -65,7 +65,7 @@ const Login = () => {
         if (!newUser) {
             firebase.auth().signInWithEmailAndPassword(loggedInUser.email, loggedInUser.password)
                 .then((userCredential) => {
-                    const {displayName, email, photoURL} = userCredential.user;
+                    const { displayName, email, photoURL } = userCredential.user;
                     const signInUser = {
                         name: displayName,
                         email: email,
@@ -92,7 +92,7 @@ const Login = () => {
         firebase.auth()
             .signInWithPopup(googleProvider)
             .then((result) => {
-                const {displayName, email, photoURL} = result.user;
+                const { displayName, email, photoURL } = result.user;
                 const signInUser = {
                     name: displayName,
                     email: email,
@@ -109,45 +109,51 @@ const Login = () => {
                 setLoggedInUser(signInUser);
             });
     }
-console.log(loggedInUser)
+    console.log(loggedInUser)
 
 
     return (
         <div className="mt-5">
-            <NavbarLogin/>
+            <NavbarLogin />
 
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6 offset-md-3">
-                    <div className="pt-5 login-method">
-                        <form action="" onSubmit={handleSubmit}>
-                            <h3 className="py-3">{newUser ? 'Create an account' : 'Log in'}</h3>
-                            {newUser && 
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6 offset-md-3">
+                        <div className="pt-5 login-method">
+                        <h4> For Testing Admin panel </h4>
+                    <ul>
+                        <li> Email: test@test.com</li>
+                        <li> Password: #2021dev</li>
+                    </ul>
+                            <form action="" onSubmit={handleSubmit}>
+                                <h3 className="py-3">{newUser ? 'Create an account' : 'Log in'}</h3>
+                                {newUser &&
+                                    <div>
+                                        <input type="text" name="name" onBlur={handleBlur} placeholder="Name" className="form-control mb-3" required />
+                                    </div>
+                                }
                                 <div>
-                                    <input type="text" name="name" onBlur={handleBlur} placeholder="Name" className="form-control mb-3" required/>
-                                </div> 
-                            }
-                            <div>
-                                <input type="email" name="email" onBlur={handleBlur} placeholder='Email' className="form-control mb-3" required/>
-                            </div>
-                            <div>
-                                <input type="password" name="password" onBlur={handleBlur} placeholder="Password" className="form-control mb-3" required/>
-                            </div>
-                           
-                            {/* {validation.error && <p className="text-danger">{validation.error}</p>} */}
-                            <input type="submit" value={newUser ? 'Create an account' : 'Log in'} className="btn btn-secondary w-100 form-btn mt-4"/>
-                            <p onClick={() => setNewUser(!newUser)}>{newUser ? "Already have an account?" : "Don't have an account?"} <span>{newUser ? 'Log in' : 'Create an account'}</span></p>
-                            {/* {loggedInUser.error && <p className="text-danger">{loggedInUser.error}</p>} */}
-                        </form>
+                                    <input type="email" name="email" onBlur={handleBlur} placeholder='Email' className="form-control mb-3" required />
+                                </div>
+                                <div>
+                                    <input type="password" name="password" onBlur={handleBlur} placeholder="Password" className="form-control mb-3" required />
+                                </div>
 
-                        <div className="brand-login mb-5">
-                            <button onClick={handleGoogleSignIn} className="w-100 form-btn"><span><FontAwesomeIcon icon={faGoogle} /></span>   Continue With Google</button>
+                                {/* {validation.error && <p className="text-danger">{validation.error}</p>} */}
+                                <input type="submit" value={newUser ? 'Create an account' : 'Log in'} className="btn btn-secondary w-100 form-btn mt-4" />
+                                <p onClick={() => setNewUser(!newUser)}>{newUser ? "Already have an account?" : "Don't have an account?"} <span>{newUser ? 'Log in' : 'Create an account'}</span></p>
+                                {/* {loggedInUser.error && <p className="text-danger">{loggedInUser.error}</p>} */}
+                            </form>
+
+                            <div className="brand-login mb-5">
+                                <button onClick={handleGoogleSignIn} className="w-100 form-btn"><span><FontAwesomeIcon icon={faGoogle} /></span>   Continue With Google</button>
+                            </div>
                         </div>
                     </div>
-                </div> 
+
+                </div>
             </div>
         </div>
-    </div>
     );
 };
 
